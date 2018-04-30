@@ -33,7 +33,7 @@ public class EC2Operations {
 
 	static {
 		// Your accesskey and secretkey
-		AWS_CREDENTIALS = new BasicAWSCredentials("AKIAI6KYO35AETGNV6RA", "8bkuvmYglKIVTNzQgrZKzmUvTE6Qunpa2AYGS2he");
+		AWS_CREDENTIALS = new BasicAWSCredentials("AXXXXXXXXXX", "8bKKKKKKKKKKKKKKKKKKKKKKKKKKK");
 		ec2Client = AmazonEC2ClientBuilder.standard().withCredentials(new AWSStaticCredentialsProvider(AWS_CREDENTIALS))
 				.withRegion(Regions.US_WEST_1).build();
 	}
@@ -41,7 +41,7 @@ public class EC2Operations {
 	public void createInstance(String name) {
 
 		// Launch an Amazon EC2 Instance
-		RunInstancesRequest runInstancesRequest = new RunInstancesRequest().withImageId("ami-46e1f226")
+		RunInstancesRequest runInstancesRequest = new RunInstancesRequest().withImageId("ami-$$$$$")
 				.withInstanceType("t2.micro") // https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html
 				.withMinCount(1).withMaxCount(1);
 
