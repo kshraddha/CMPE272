@@ -82,7 +82,7 @@ public class EC2Operations {
 		for (Instance instance : instances) {
 			stopInstance(instance.getInstanceId());
 			Integer instanceState = -1;
-			while(instanceState != 80) { //Loop until the instance is in the "running" state.
+			while(instanceState != 80) { //Loop until the instance is stopped.
 			    instanceState = getInstanceStatus(instance.getInstanceId());
 			    try {
 			        Thread.sleep(10000);
